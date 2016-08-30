@@ -13,9 +13,6 @@ while True:
         break
 
 string_input = input("Please enter a sentence: \n\n")
-string_list = list(string_input)
-
-b = int(0)
 
 for character in string_input:
     number = ord(character) - 97
