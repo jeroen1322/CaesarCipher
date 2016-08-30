@@ -3,6 +3,7 @@ import time
 
 int_list = []
 char_list = []
+message = []
 alphabet = string.ascii_lowercase
 
 while True:
@@ -13,28 +14,32 @@ while True:
     else:
         break
 
-string_input = input("Please enter a sentence: \n\n")
-string_input = string_input.lower()
+string_input = input("Please enter a sentence: (WITHOUT SPACES) \n\n")
 
-print("Processing.....")
+print("Processing.....\n")
 time.sleep(1)
-
+string_input = string_input.lower()
 for character in string_input:
     number = ord(character) - 97
     int_list.append(number)
     calc = number + key
-    print("{} + {} = {}".format(number, key, calc))
+    print("{} + {} = {} = {}".format(number, key, calc, alphabet[number]))
     char_list.append(calc)
 
-print("\nThe message: ")
 for i in char_list:
     if(i > 25):
-        print("Making some corrections.... {} - 26 = {}\n".format(i, i-26))
         i = i - 26
-    elif(i < 0):
-        print("Making some corrections.... {} + 26 = {}\n".format(i, i+26))
-        i = i + 26
+        print("Making some corrections.... {} - 26 = {} = {}".format(i, i-26, alphabet[i]))
 
-    print(alphabet[i], end='')
+    elif(i < 0):
+        i = i + 26
+        print("Making some corrections.... {} + 26 = {} = {}".format(i, i+26, alphabet[i]))
+
+
+    message.append(alphabet[i])
+
+print("\n #### MESSAGE #### \n")
+for i in message:
+    print(i, end='')
 
 input("\n\n")
