@@ -19,7 +19,7 @@ while True:
 
 string_input = input("\nPlease enter a sentence (WITHOUT SPACES):\n")
 
-print("Processing.....\n")
+print("\nProcessing.....\n")
 time.sleep(1)
 string_input = string_input.lower()
 for character in string_input:
