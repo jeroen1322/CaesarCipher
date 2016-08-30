@@ -17,7 +17,7 @@ while True:
     else:
         break
 
-string_input = input("Please enter a sentence: (WITHOUT SPACES) \n\n")
+string_input = input("\nPlease enter a sentence (WITHOUT SPACES):\n")
 
 print("Processing.....\n")
 time.sleep(1)
