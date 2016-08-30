@@ -9,6 +9,9 @@ alphabet = string.ascii_lowercase
 while True:
     try:
         key = int(input("Key: "))
+        if(key > 13) | (key < 1):
+            print("The key should be between 1 and 13 \n")
+            continue
     except ValueError:
         print("Sorry, that is not a valid key.\n")
     else:
@@ -33,7 +36,7 @@ for i in char_list:
     elif(i < 0):
         i = i + 26
         print("Making some corrections.... {} + 26 = {} = {}".format(i, i+26, alphabet[i]))
-        
+
     message.append(alphabet[i])
 
 print("\n #### MESSAGE #### \n")
