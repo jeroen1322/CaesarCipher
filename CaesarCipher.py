@@ -36,4 +36,3 @@ for i in char_list:
     print(alphabet[i], end='')
 
 input("\n\n")
-
