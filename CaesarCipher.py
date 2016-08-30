@@ -1,4 +1,5 @@
 import string
+import time
 
 int_list = []
 char_list = []
@@ -13,6 +14,10 @@ while True:
         break
 
 string_input = input("Please enter a sentence: \n\n")
+string_input = string_input.lower()
+
+print("Processing.....")
+time.sleep(1)
 
 for character in string_input:
     number = ord(character) - 97
