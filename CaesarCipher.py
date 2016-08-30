@@ -23,19 +23,17 @@ for character in string_input:
     number = ord(character) - 97
     int_list.append(number)
     calc = number + key
-    print("{} + {} = {} = {}".format(number, key, calc, alphabet[number]))
+    print("{} + {} = {} = {}".format(number, key, calc, alphabet[calc]))
     char_list.append(calc)
 
 for i in char_list:
     if(i > 25):
         i = i - 26
         print("Making some corrections.... {} - 26 = {} = {}".format(i, i-26, alphabet[i]))
-
     elif(i < 0):
         i = i + 26
         print("Making some corrections.... {} + 26 = {} = {}".format(i, i+26, alphabet[i]))
-
-
+        
     message.append(alphabet[i])
 
 print("\n #### MESSAGE #### \n")
