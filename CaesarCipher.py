@@ -1,43 +1,14 @@
-import string
 import time
+import codecs
 
-int_list = []
-char_list = []
-message = []
-alphabet = string.ascii_lowercase
+print()
+string_input = input("Please enter a sentence to encode or decode:\n")
 
-while True:
-    try:
-        key = int(input("Key (Between 1 and 26): "))
-        if(key > 26) | (key < 1):
-            print("The key should be between 1 and 13 \n")
-            continue
-    except ValueError:
-        print("Sorry, that is not a valid key.\n")
-    else:
-        break
-
-string_input = input("\nPlease enter a sentence (WITHOUT SPACES):\n")
-
-print("\nProcessing.....\n")
-time.sleep(1)
-string_input = string_input.lower()
-for character in string_input:
-    number = ord(character) - 97
-    int_list.append(number)
-    calc = number + key
-    char_list.append(calc)
-
-for i in char_list:
-    if(i > 25):
-        i = i - 26
-    elif(i < 0):
-        i = i + 26
-
-    message.append(alphabet[i])
-
-print("\n #### MESSAGE #### \n")
-for i in message:
-    print(i, end='')
+encode = codecs.getencoder("rot-13")
+result = encode(string_input)[0]
+print("\nProcessing.....")
+time.sleep(0.5)
+print("\nMessage:")
+print(result)
 
 input("\n\n")
