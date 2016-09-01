@@ -2,7 +2,7 @@ import time
 import codecs
 
 print()
-string_input = input("Please enter a sentence to encode or decode:\n")
+string_input = input("Please enter a sentence to encode or decode (with the key 13):\n")
 
 encode = codecs.getencoder("rot-13")
 result = encode(string_input)[0]
